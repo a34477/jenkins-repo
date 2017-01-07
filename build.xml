@@ -1,10 +1,10 @@
-<project name ="flipkart">
+<project name ="flipkart" default = "package">
 <target name = "compile">
 <mkdir dir = "classes"/>
 <javac srcdir = "src" destdir = "classes"/>
 </target>
 
-<target name = "package">
+<target name = "package" depends = "compile">
 <mkdir dir = "lib"/>
 <jar basedir ="classes" destfile ="lib/flipkart.jar"/>
 </target>
